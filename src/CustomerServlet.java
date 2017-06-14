@@ -45,11 +45,11 @@ public class CustomerServlet extends HttpServlet {
 		
 			while(rs.next()){
 				
-				String CustomerDetail = rs.getString(1) + "\n" 
-				                        +rs.getString(2) + " " +rs.getString(5) + " "+ rs.getString(6) + " "+ rs.getString(7) + " \n"
-				                        + rs.getString(8) + " \n"
-				                        + rs.getString(9) + " \n"
-				                        + rs.getString(10) + "\n"
+				String CustomerDetail = rs.getString(1) + "\n<br>" 
+				                        +rs.getString(2) + " " +rs.getString(5) + " "+ rs.getString(6) + " "+ rs.getString(7) + " \n<br>"
+				                        + rs.getString(8) + " \n<br>"
+				                        + rs.getString(9) + " \n<br>"
+				                        + rs.getString(10) + "\n<br>"
 				                        + rs.getString(10);
 				CustomerDetail = CustomerDetail.concat(CustomerDetail);
 				//SCustomerDetail = CustomerDetail.concat(CustomerDetail);
