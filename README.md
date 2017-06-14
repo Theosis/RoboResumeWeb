@@ -12,9 +12,9 @@ What's New?
   
 The input is made through a web form  
 The output is made to a web page something like this: http://codeworkacademy.com/resume.html  
-Extra Credit!  Make it pretty. Use something like this: http://themes.3rdwavemedia.com/demo/orbit/ (Links to an external site.)Links to an external site.  
+*Extra Credit!*  Make it pretty. Use something like this: http://themes.3rdwavemedia.com/demo/orbit/ (Links to an external site.)Links to an external site.  
   
-The requirements from the last challenge must still be met.  
+*The requirements from the last challenge must still be met.*  
   
 When the user is done entering the information, the program should output the information  
 to look something like the following:  
