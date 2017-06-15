@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CustomerServlet
  */
-@WebServlet("/CustomerServlet")
+@WebServlet("/CV")
 public class CustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -34,26 +34,22 @@ public class CustomerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String nextURL = "/view.jsp";
-		String lastName = request.getParameter("last_name");
+		String formName = request.getParameter("webName");
 		Connection con = cm.getConnection();
 		
-		String query = "SELECT FullName, Title, FirstName, LastName, StreetAddress, City, State,ZipCode, EmailAddress, Position, Company  FROM customer WHERE LastName = '"+ lastName + "'";
+		String query = "SELECT name, email FROM person WHERE name = '"+ formName + "'";
 		try{
 			
 			stm = con.createStatement();
 			rs = stm.executeQuery(query);
+			String personData = "";
 		
 			while(rs.next()){
 				
-				String CustomerDetail = rs.getString(1) + "\n<br>" 
-				                        +rs.getString(2) + " " +rs.getString(5) + " "+ rs.getString(6) + " "+ rs.getString(7) + " \n<br>"
-				                        + rs.getString(8) + " \n<br>"
-				                        + rs.getString(9) + " \n<br>"
-				                        + rs.getString(10) + "\n<br>"
-				                        + rs.getString(10);
-				CustomerDetail = CustomerDetail.concat(CustomerDetail);
-				//SCustomerDetail = CustomerDetail.concat(CustomerDetail);
-				request.setAttribute("msg", CustomerDetail);
+				String personRow = rs.getString(1) + "<br>" 
+				                        +rs.getString(2);
+				personData = personData.concat(personRow);
+				request.setAttribute("msg", personData);
 			}
 			
 			getServletContext().getRequestDispatcher(nextURL).forward(request,response);
