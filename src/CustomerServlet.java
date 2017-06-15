@@ -35,6 +35,9 @@ public class CustomerServlet extends HttpServlet {
 		
 		String nextURL = "/view.jsp";
 		String formName = request.getParameter("webName");
+		
+		System.out.println("\n**************\n"+formName+"\n**************\n");
+		
 		Connection con = cm.getConnection();
 		
 		String query = "SELECT name, email FROM person WHERE name = '"+ formName + "'";
@@ -46,8 +49,7 @@ public class CustomerServlet extends HttpServlet {
 		
 			while(rs.next()){
 				
-				String personRow = rs.getString(1) + "<br>" 
-				                        +rs.getString(2);
+				String personRow = rs.getString(1) + "<br>"	+ rs.getString(2);
 				personData = personData.concat(personRow);
 				request.setAttribute("msg", personData);
 			}

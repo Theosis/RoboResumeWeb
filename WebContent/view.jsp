@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Data processing</title>
+<title>Person Information</title>
 </head>
 <body>
-<h1>The result of your query is:</h1>
+<h1>The result of your query is:</h1><br>
 <h2>${msg}</h2><br>
 </body>
 </html>
