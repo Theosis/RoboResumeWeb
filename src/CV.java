@@ -12,13 +12,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import resumeDBWithServlet.model.ConnectionManager;
-
 /**
  * Servlet implementation class CustomerServlet
  */
 @WebServlet("/CV")
-public class CustomerServlet extends HttpServlet {
+public class CV extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	ConnectionManager cm = new ConnectionManager();
@@ -26,7 +24,7 @@ public class CustomerServlet extends HttpServlet {
 	ResultSet rs;
 	
 	
-    public CustomerServlet() {
+    public CV() {
         super();
         
     }
